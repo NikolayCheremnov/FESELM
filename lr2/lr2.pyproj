@@ -21,7 +21,22 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DataTable.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="lr2.py" />
+    <Compile Include="NetworkGraph.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Node.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Row.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserDialog.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
