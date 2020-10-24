@@ -6,6 +6,7 @@ testData = ['good_test.txt',
             'cycle_test.txt', 
             'initial_test.txt', 
             'finishing_test.txt', 
+            'bad_test.txt',
             'example.txt']
 
 if __name__ == "__main__":
