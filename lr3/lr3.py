@@ -6,15 +6,9 @@ sys.path.append(os.path.join(sys.path[0], '../packages'))
 from NetworkGraph.DataTable import DataTable
 from NetworkGraph.NetworkGraph import NetworkGraph
 
-testDatafoo = ['good_test.txt', 
-            'parallel_test.txt', 
-            'cycle_test.txt', 
-            'initial_test.txt', 
-            'finishing_test.txt', 
-            'bad_test.txt',
-            'example.txt']
-
-testData = ['six.txt']
+testData = ['good_test.txt', 
+            'six.txt', 
+            'test.txt',]
 
 if __name__ == "__main__":
     for test in testData:
