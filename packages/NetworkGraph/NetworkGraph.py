@@ -69,7 +69,7 @@ class NetworkGraph(object):
                 # 1) на наличие петель
                 if nodeA.value == nodeB.value:
                     print('Обработка строки '+row.toString()+'\nОбнаружена петля. Работа будет удалена.')
-                    removeEdge(nodeA, nodeB, row.t)
+                    self.removeEdge(nodeA, nodeB, row.t)
                     continue
 
                 # 2) проверить наличие параллельной работы (тогда циклов нет в силу алгоритма)
