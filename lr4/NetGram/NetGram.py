@@ -53,11 +53,11 @@ if __name__ == "__main__":
             print('Список доступных команд:')
             print('exit - завершить работу')
             print('help - вывести список доступных команд')
-            print('add A B t - добавить работу от события A к событию B длительностью t (A, B, t целые > 0)')
-            print('remove A B t - удалить работу от события A к событию B длительностью t (A, B, t целые > 0)')
+            print('add A B t - добавить работу от события A к событию B длительностью t (A, B, t целые >= 0)')
+            print('remove A B t - удалить работу от события A к событию B длительностью t (A, B, t целые >= 0)')
         # добавление работы
         elif cmd[0] == 'add':           
-            if len(cmd) == 4 and int(cmd[1]) > 0 and int(cmd[2]) > 0 and int(cmd[3]) > 0:
+            if len(cmd) == 4 and int(cmd[1]) >= 0 and int(cmd[2]) >= 0 and int(cmd[3]) >= 0:
                 dt = ng.ngTable
                 dt.addRow(int(cmd[1]), int(cmd[2]), int(cmd[3]))
                 ng = ngCycle(dt)
@@ -65,7 +65,7 @@ if __name__ == "__main__":
                 message('Недопустимые аргументы команды. Изспользуйте help чтобы получить больше информации о командах')
         # удаление работы
         elif cmd[0] == 'remove':
-            if len(cmd) == 4 and int(cmd[1]) > 0 and int(cmd[2]) > 0 and int(cmd[3]) > 0:
+            if len(cmd) == 4 and int(cmd[1]) >= 0 and int(cmd[2]) >= 0 and int(cmd[3]) >= 0:
                 dt = ng.ngTable
                 removeable = dt.removeRow(int(cmd[1]), int(cmd[2]), int(cmd[3]))
                 if removeable == None:
