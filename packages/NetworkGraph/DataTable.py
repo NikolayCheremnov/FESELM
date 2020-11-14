@@ -39,9 +39,17 @@ class DataTable(object):
                 events.append(row.B)
         return events
 
-    # удаление строки из таблицы
-    def removeLastRow(self, row):
-        self.rows.remove(row)
+    # удаление строки по позиции
+    def removeRow(self, A, B, t):
+        removeable = None
+        for row in self.rows:
+            if row.A == A and row.B == B and row.t == t:
+                removeable = row
+        if removeable == None:
+            return None
+        else:
+            self.rows.remove(removeable)
+            return removeable
 
     # добавление строки в конец таблицы
     def addRow(self, A, B, t):
@@ -61,5 +69,13 @@ class DataTable(object):
             table.add_row([row.A, row.B, row.t])
     
         print(table)
+
+    # процедура освобождения значения -1 под фиктивные вершины
+    def releaseFictiveValue(self):
+        for row in self.rows:
+            if row.A < 0:
+                row.A -= 2
+            if row.B < 0:
+                row.B -= 2
 
 

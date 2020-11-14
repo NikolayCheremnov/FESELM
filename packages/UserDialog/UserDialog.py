@@ -11,14 +11,22 @@ def dialog(msg, validSet):
             print('data is invalid, try again (available: ', validSet, ')')
         else:
             return reply
+
+# вывод сообщения
 def message(msg):
     print(msg)
     print('press enter to continue', end='')
     input()
 
+# получение команды с параметрами
+def cmdDialog(msg):
+    print('user dialog:', msg, ': ', end='')
+    cmd = input().split()
+    return cmd
+
+# валидация
 def validate(reply, validSet):
     for elem in validSet:
         if reply == elem:
             return True
     return False
-
